@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type="text/xsl" href="student.xsl"?>
+<Students>
+
+    <Student id="101">
+        <name>Riya</name>
+        <department>IT</department>
+        <marks>85</marks>
+    </Student>
+
+    <Student id="103">
+        <name>Priya</name>
+        <department>ECE</department>
+        <marks>92</marks>
+    </Student>
+
+    <Student id="104">
+        <name>Karan</name>
+        <department>IT</department>
+        <marks>25</marks>
+    </Student>
+
+    <Student id="105">
+        <name>Rishi</name>
+        <department>CSE</department>    
+        <marks>55</marks>
+    </Student>
+
+<Student id="107"><name>Alya</name><department>EEE</department><marks>85</marks></Student><Student id="102"><name>Ram</name><department>CSE</department><marks>45</marks></Student></Students>

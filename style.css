@@ -1,0 +1,530 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    color: #1e293b;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* HEADER */
+
+.header {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 35px;
+    border-radius: 22px;
+    box-shadow: 0 15px 35px rgba(79, 70, 229, 0.25);
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header:after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+    right: -60px;
+    top: -80px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.header p {
+    opacity: 0.9;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+/* SUMMARY CARDS */
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+.card-title {
+    font-size: 13px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.card-value {
+    font-size: 30px;
+    font-weight: bold;
+    color: #4f46e5;
+}
+
+.pass-value {
+    color: #16a34a;
+}
+
+.fail-value {
+    color: #dc2626;
+}
+
+.average-value {
+    color: #ea580c;
+}
+
+/* TOP PERFORMER */
+
+.topper {
+    background: linear-gradient(135deg, #fff7ed, #ffedd5);
+    border: 1px solid #fed7aa;
+    padding: 20px 25px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topper-title {
+    font-size: 14px;
+    color: #9a3412;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.topper-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #7c2d12;
+}
+
+.topper-mark {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ea580c;
+}
+
+/* TABLE */
+
+.table-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.09);
+    border: 1px solid #e2e8f0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f8fafc;
+}
+
+th {
+    padding: 18px 20px;
+    text-align: left;
+    font-size: 13px;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 15px;
+}
+
+tbody tr {
+    transition: 0.2s;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+.student-id {
+    color: #6366f1;
+    font-weight: bold;
+}
+
+.student-name {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.department {
+    color: #64748b;
+}
+
+.marks {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* GRADE BADGES */
+
+.grade {
+    display: inline-block;
+    padding: 6px 13px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.grade-a {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.grade-b {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.grade-c {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.grade-d {
+    background: #ffedd5;
+    color: #c2410c;
+}
+
+.grade-f {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+/* STATUS */
+
+.status {
+    font-weight: bold;
+}
+
+.pass {
+    color: #16a34a;
+}
+
+.fail {
+    color: #dc2626;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .table-card {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 750px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+}
+
+/* PRINT */
+
+@media print {
+
+    body {
+        background: white;
+        padding: 0;
+    }
+
+
+    .header {
+        box-shadow: none;
+    }
+
+    .card,
+    .table-card {
+        box-shadow: none;
+    }
+
+}
+
+
+/* STUDENT DROPDOWN */
+
+.student-selector {
+    background: white;
+    padding: 22px 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 30px;
+}
+
+.student-selector label {
+    display: block;
+    font-size: 13px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.student-selector select {
+    width: 100%;
+    max-width: 400px;
+    padding: 13px 16px;
+
+    font-size: 15px;
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    color: #1e293b;
+    background-color: #f8fafc;
+
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+
+    outline: none;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.student-selector select:hover {
+    border-color: #a5b4fc;
+}
+
+.student-selector select:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+
+/* ADD STUDENT */
+.add-student-section {
+    background: white;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.add-student-section h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+#addStudentForm {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+#addStudentForm input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#addStudentForm button {
+    padding: 12px 20px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#addStudentForm button:hover {
+    background: #1d4ed8;
+}
+
+#message {
+    color: #16a34a;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* ==================================================
+   ACTION BUTTONS
+   ================================================== */
+
+.actions {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.icon-button {
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 9px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    margin-right: 5px;
+
+    transition: all 0.2s ease;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* EDIT */
+
+.edit-button {
+    background: #eef2ff;
+    color: #4f46e5;
+}
+
+.edit-button:hover {
+    background: #c7d2fe;
+    transform: translateY(-2px);
+}
+
+
+/* DELETE */
+
+.delete-button {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.delete-button:hover {
+    background: #fecaca;
+    transform: translateY(-2px);
+}
+
+
+/* SAVE */
+
+.save-button {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.save-button:hover {
+    background: #bbf7d0;
+    transform: translateY(-2px);
+}
+
+
+/* CANCEL */
+
+.cancel-button {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.cancel-button:hover {
+    background: #e2e8f0;
+    transform: translateY(-2px);
+}
+
+
+/* EDIT INPUTS */
+
+.edit-input {
+    width: 100%;
+    min-width: 120px;
+
+    padding: 9px 10px;
+
+    border: 2px solid #c7d2fe;
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    color: #1e293b;
+    background: #f8fafc;
+
+    outline: none;
+}
+
+
+.edit-input:focus {
+    border-color: #6366f1;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(99, 102, 241, 0.12);
+}
+
+
+/* EDITING ROW */
+
+.student-row.editing {
+    background: #f8fafc;
+}
+
+
+.student-row.editing td {
+    vertical-align: middle;
+}
